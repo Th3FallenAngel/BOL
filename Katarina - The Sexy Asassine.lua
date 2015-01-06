@@ -33,13 +33,13 @@ if lib_downloadNeeded then return end
  
 
 local UPDATE_HOST = "raw.github.com"
-local UPDATE_PATH = "/Th3FallenAngel/B0L/master/Katarina%20-%20The%20Sexy%20Asassine.lua".."?rand="..math.random(1,10000)
+local UPDATE_PATH = "/Th3FallenAngel/BOL/master/Katarina%20-%20The%20Sexy%20Asassine.lua".."?rand="..math.random(1,10000)
 local UPDATE_FILE_PATH = SCRIPT_PATH .. GetCurrentEnv().FILE_NAME
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
 function AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>Katarina :</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
 
-local ServerData = GetWebResult(UPDATE_HOST, "/Th3FallenAngel/B0L/master/Katarina%20TSA.version")
+local ServerData = GetWebResult(UPDATE_HOST, "/Th3FallenAngel/BOL/master/Katarina%20TSA.version")
 
 if ServerData then
 	ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
