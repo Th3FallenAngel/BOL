@@ -1,4 +1,4 @@
-local version = "1.1"
+local version = "0.001"
 
 if myHero.charName ~= "Katarina" then return end
 
@@ -13,7 +13,7 @@ function AfterDownload()
 	lib_downloadCount = lib_downloadCount - 1
 	if lib_downloadCount == 0 then
 		lib_downloadNeeded = false
-		print("<font color=\"#FF0000\">Katarina The Sexy Assasine:</font> <font color=\"#FFFFFF\">Required libraries downloaded successfully, please reload (double F9).</font>")
+		print("<font color=\"#FF0000\">Katarina - The Sexy Assasine:</font> <font color=\"#FFFFFF\">Required libraries downloaded successfully, please reload (double F9).</font>")
 	end
 end
 
@@ -33,7 +33,7 @@ if lib_downloadNeeded then return end
  
 
 local UPDATE_HOST = "raw.github.com"
-local UPDATE_PATH = "/Th3FallenAngel/B0L/master/Katarina%20The%20Sexy%20Asassine.lua".."?rand="..math.random(1,10000)
+local UPDATE_PATH = "/Th3FallenAngel/B0L/master/Katarina%20-%20The%20Sexy%20Asassine.lua".."?rand="..math.random(1,10000)
 local UPDATE_FILE_PATH = SCRIPT_PATH .. GetCurrentEnv().FILE_NAME
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
