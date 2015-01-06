@@ -13,7 +13,7 @@ function AfterDownload()
 	lib_downloadCount = lib_downloadCount - 1
 	if lib_downloadCount == 0 then
 		lib_downloadNeeded = false
-		print("<font color=\"#FF0000\">Katarina - The Sexy Assasine:</font> <font color=\"#FFFFFF\">Required libraries downloaded successfully, please reload (double F9).</font>")
+		print("<font color=\"#FF0000\">Katarina - The Sexy Asassine:</font> <font color=\"#FFFFFF\">Required libraries downloaded successfully, please reload (double F9).</font>")
 	end
 end
 
