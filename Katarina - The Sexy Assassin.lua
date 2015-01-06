@@ -1,7 +1,7 @@
-if myHero.charName ~= "Swain" then return end
+if myHero.charName ~= "Katarina" then return end
 
 -- Download script
-local version = 0.000
+local version = 0.001
 local author = "Fallen Angel"
 local SCRIPT_NAME = "Katarina - The Sexy Assassin"
 local AUTOUPDATE = true
@@ -12,7 +12,7 @@ local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
 function AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>Kataeina:</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
 if AUTOUPDATE then
-	local ServerData = GetWebResult(UPDATE_HOST, "/Th3FallenAngel/BOL/master/version/Katarina%20TSA.version")
+	local ServerData = GetWebResult(UPDATE_HOST, "/Th3FallenAngel/BOL/master/versions/Katarina%20TSA.version")
 	if ServerData then
 		ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
 		if ServerVersion then
@@ -114,11 +114,7 @@ function Menu()
 
  	--Items
  	Menu:addSubMenu("Item Settings", "items")
- 	DelayAction(function() 
- 		if _G.TotallyLib_Loaded then
-			MenuMisc(Menu.misc, true)
-		end
- 	end, 0.5)
+ 	Menu.drawings:addParam("usedfg", "Use Deathfire Grasp", SCRIPT_PARAM_ONOFF, true)
  	
 
 	--Orbwalker
@@ -127,8 +123,8 @@ function Menu()
 
 	 -- Always show
 	 Menu.keys:permaShow("combo")
+	 Menu.killsteal:permaShow("killsteal")
 	 Menu.keys:permaShow("harass")
-	 --Menu.killsteal:permaShow("killsteal")
 	 Menu.keys:permaShow("laneclear")
 	 Menu.drawings:permaShow("draw")
 
